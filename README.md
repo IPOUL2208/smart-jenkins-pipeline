@@ -19,7 +19,7 @@ Git & GitHub Personal Access Token
 
 Linux (Ubuntu)
 
-🏗️ Project Architecture
+ Project Architecture
 GitHub Repo
    ↓ (Webhook)
 Jenkins (Freestyle Job)
@@ -28,7 +28,7 @@ Apache Web Server
    ↓
 Static Website (Public URL)
 
-🎯 What I Learned From This Project
+ What I Learned From This Project
 🔹 Jenkins & CI/CD
 
 Installed and configured Jenkins on Ubuntu EC2
@@ -71,8 +71,8 @@ Understood the importance of public IP vs private IP
 
 Verified services using curl and system logs
 
-🐞 Errors I Faced & How I Fixed Them
-❌ 1. yum: command not found
+ Errors I Faced & How I Fixed Them
+ 1. yum: command not found
 
 Cause:
 Used Amazon Linux commands on Ubuntu.
@@ -83,7 +83,7 @@ Switched to Ubuntu commands:
 sudo apt update
 sudo apt install apache2
 
-❌ 2. GitHub Authentication Failed
+2. GitHub Authentication Failed
 
 Cause:
 GitHub no longer supports password authentication.
@@ -94,7 +94,7 @@ Created a GitHub Personal Access Token
 
 Used the token as the Git password
 
-❌ 3. Webhook Not Triggering Jenkins
+3. Webhook Not Triggering Jenkins
 
 Causes Identified:
 
@@ -112,7 +112,7 @@ Enabled “GitHub hook trigger for GITScm polling”
 
 Verified webhook delivery (HTTP 200 OK)
 
-❌ 4. Apache Default Page Still Showing
+4. Apache Default Page Still Showing
 
 Cause:
 Jenkins was not copying files to Apache web root.
@@ -130,7 +130,7 @@ Corrected Jenkins build step:
 
 cp -r * /var/www/html/
 
-❌ 5. Changes Not Reflecting on Website
+5. Changes Not Reflecting on Website
 
 Cause:
 Editing files outside Apache web root or Jenkins overwriting manual changes.
@@ -144,7 +144,7 @@ Edit code → Git push → Jenkins build → Apache update
 
 Used hard refresh / incognito to avoid browser cache
 
-✅ Final Outcome
+Final Outcome
 
 Successfully created a Jenkins Freestyle CI/CD pipeline
 
@@ -154,7 +154,7 @@ Website updates automatically on every GitHub push
 
 Fully working GitHub → Jenkins → Apache automation
 
-🌱 Impact on My Learning Journey
+Impact on My Learning Journey
 
 This project:
 
@@ -170,7 +170,7 @@ Prepared me for DevOps / Cloud interviews
 
 Most importantly, I learned how to troubleshoot instead of giving up.
 
-🚀 Future Improvements
+Future Improvements
 
 Convert Freestyle job to Jenkins Pipeline (Jenkinsfile)
 
@@ -180,6 +180,6 @@ Add Docker for containerized builds
 
 Secure Jenkins with authentication & HTTPS
 
-📌 Conclusion
+Conclusion
 
 This project was a strong foundation in my DevOps learning journey and helped me understand how modern CI/CD pipelines work in real production-like environments.
